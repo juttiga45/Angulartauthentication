@@ -1,0 +1,68 @@
+<div class="background bg-r loginSection">
+  <div class="row">
+    <div class="login-block">
+      <div class="bg-color border-radius form-head">Angular</div>
+      <form [formGroup]="angForm" novalidate class="login-form">
+        <div class="form-group">
+          <div class="form-group mb-3">
+            <b>Useremail</b>
+            <input
+              type="text"
+              id="input"
+              class="login-input form-control"
+              formControlName="name"
+              placeholder="User Email"
+              name="uaseName"
+              [(ngModel)]="userInputDetails.email"
+            />
+            <div
+              *ngIf="
+                angForm.controls['name'].invalid &&
+                (angForm.controls['name'].dirty ||
+                  angForm.controls['name'].touched)
+              "
+              class="alert alert-danger"
+            >
+              <div *ngIf="angForm.controls['name'].errors.required">
+                Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mt-0">
+          <b>Pasword</b>
+          <input
+            type="password"
+            id="input"
+            formControlName="password"
+            class="login-input"
+            name="password"
+            placeholder="Pasword"
+            [(ngModel)]="userInputDetails.password"
+          />
+          <div
+            *ngIf="
+              angForm.controls['password'].invalid &&
+              (angForm.controls['password'].dirty ||
+                angForm.controls['password'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="angForm.controls['password'].errors.required">
+              password is required.
+            </div>
+          </div>
+        </div>
+        <br />
+        <a
+          class="button-fullwidth login-btn bt-color-3 border-radius alt"
+          (click)="doLogin()"
+          >Login</a
+        >
+        <br /><br />
+        <a [routerLink]="['../registration']">registrer</a>
+      </form>
+    </div>
+  </div>
+</div>

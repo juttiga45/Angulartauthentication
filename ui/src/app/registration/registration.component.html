@@ -1,0 +1,114 @@
+<div class="background bg-r registerSection">
+  <div class="row">
+    <div class="login-block">
+      <div class="bg-color border-radius form-head">Registration Form</div>
+      <form [formGroup]="angForm" novalidate class="login-form">
+        <div class="form-group mb-3">
+          <div class="form-group">
+            <b>User name</b>
+            <input
+              type="text"
+              id="input"
+              class="login-input"
+              placeholder="User Name"
+              formControlName="name"
+              name="uaseName"
+              [(ngModel)]="userInputDetails.username"
+            />
+            <div
+              *ngIf="
+                angForm.controls['name'].invalid &&
+                (angForm.controls['name'].dirty ||
+                  angForm.controls['name'].touched)
+              "
+              class="alert alert-danger"
+            >
+              <div *ngIf="angForm.controls['name'].errors.required">
+                Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <b>User email</b>
+          <input
+            type="text"
+            id="input"
+            class="login-input"
+            placeholder="User Email"
+            formControlName="email"
+            name="email"
+            [(ngModel)]="userInputDetails.email"
+          />
+          <div
+            *ngIf="
+              angForm.controls['email'].invalid &&
+              (angForm.controls['email'].dirty ||
+                angForm.controls['email'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="angForm.controls['email'].errors.required">
+              email is required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group mt-0">
+          <b>Pasword</b>
+          <input
+            type="password"
+            id="input"
+            class="login-input"
+            formControlName="password"
+            placeholder="Enter Pasword"
+            name="password"
+            [(ngModel)]="userInputDetails.password"
+          />
+          <div
+            *ngIf="
+              angForm.controls['password'].invalid &&
+              (angForm.controls['password'].dirty ||
+                angForm.controls['password'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="angForm.controls['password'].errors.required">
+              password is required.
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group mt-0">
+          <b>Mobile</b>
+          <input
+            type="password"
+            id="input"
+            class="login-input"
+            formControlName="mobile"
+            placeholder="Enter mobile"
+            name="mobile"
+            [(ngModel)]="userInputDetails.mobile"
+          />
+          <div
+            *ngIf="
+              angForm.controls['mobile'].invalid &&
+              (angForm.controls['mobile'].dirty ||
+                angForm.controls['mobile'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="angForm.controls['mobile'].errors.required">
+              mobile is required.
+            </div>
+          </div>
+        </div>
+        <br />
+        <a
+          (click)="register()"
+          class="button-fullwidth login-btn bt-color-3 border-radius alt"
+          >Register</a
+        ><br /><br />
+      </form>
+    </div>
+  </div>
+</div>

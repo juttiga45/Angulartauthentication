@@ -1,0 +1,86 @@
+.row-padding {
+  padding-left: 6.6%;
+  padding-right: 6.6%;
+}
+.footer {
+  background-color: #2d3339;
+  line-height: 24px;
+  position: sticky;
+
+  left: 0;
+  bottom: 0;
+  top: 1000px;
+  width: 100%;
+  color: white;
+}
+.footer-bottom {
+  background-color: rgba(144, 131, 131, 0.23);
+  color: #ffffff;
+  height: 50px;
+}
+.footer-bottom .copyright {
+  float: left;
+  line-height: 60px;
+  font-size: 13px;
+}
+.footer-bottom .copyright {
+  float: left;
+  line-height: 60px;
+  font-size: 13px;
+}
+footer .copyright span:before {
+  content: " \00a9 ";
+}
+.footer-nav {
+  float: right;
+}
+.footer-nav ul {
+  margin: 0;
+  font-size: 14px;
+}
+.footer-nav > ul > li {
+  float: left;
+  line-height: 60px;
+}
+.footer-nav ul li {
+  border-bottom: 0;
+  padding: 0;
+}
+.footer-nav ul li:before {
+  display: none;
+}
+.footer-nav a {
+  display: block;
+  color: #ffffff;
+  padding-left: 18px;
+  text-decoration: none;
+}
+.footer-nav > ul > li > a:after {
+  content: "|";
+  color: #8f96a2;
+  margin-left: 18px;
+}
+ul li:before {
+  content: "\f111";
+  font-family: "FontAwesome";
+  font-size: 8px;
+  position: absolute;
+  left: 0px;
+  color: #f27c66;
+  font-weight: 800;
+  line-height: 35px;
+}
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+.copyright {
+  margin-left: 40px;
+}
